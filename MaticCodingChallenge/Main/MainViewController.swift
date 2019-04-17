@@ -15,12 +15,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableview: UITableView!
     
+    var reposArray : Array<Repo> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
         self.initData();
         
-        self.getAPIRequest();
     }
     
     public func getAPIRequest() {
@@ -42,7 +43,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             case .success(let value):
                 let json = JSON(value);
-                print(json);
+                
+                let repos = Repo.arrayFromJSONArray(json: json["items"])
+                for repo:Repo in repos {
+                    
+                    self.reposArray.append(repo)
+                    self.tableview.reloadData();
+                    
+                }
                 
             case .failure(let error):
                 print(error.localizedDescription);
@@ -62,6 +70,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     public func initData() {
         
+        self.getAPIRequest();
+        
         self.tableview.delegate = self;
         self.tableview.dataSource = self;
         self.tableview.register(UINib(nibName: "RepoTableViewCell", bundle: nil), forCellReuseIdentifier: "RepoTableViewCell")
@@ -74,17 +84,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4;
+        return self.reposArray.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
+        let repo:Repo = self.reposArray[indexPath.row];
         
         let cell = tableview.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell;
         
-        let myString = "Hello" + String(indexPath.row);
-        cell.repoNumberOfStarsLabel.text = myString;
-        
+        cell.initWithRepo(repo: repo)
         return cell;
     }
 

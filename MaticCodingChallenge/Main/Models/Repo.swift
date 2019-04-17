@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Repo: NSObject {
     
@@ -17,5 +18,33 @@ class Repo: NSObject {
     var repoNumberOfStars : Int!;
     
     var owner : Owner!;
+    
+    static func arrayFromJSONArray(json:JSON) -> Array<Repo> {
+        
+        var temp = [Repo]()
+        
+        for repo in json.array! {
+            
+            let myRepo:Repo = Repo.init();
+            temp.append(myRepo.initWithJsonObject(json: repo))
+            
+        }
+        
+        return temp;
+    }
+    
+    public func initWithJsonObject(json:JSON) -> Repo {
+        
+        
+        let repo : Repo! = Repo.init();
+        repo.repoName = json["name"].string;
+        repo.repoDescription = json["description"].string;
+        repo.repoNumberOfStars = json["stargazers_count"].int;
+        
+        repo.owner = Owner.initWithJsonObject(json: json["owner"]);
+        
+        return repo;
+        
+    }
 
 }

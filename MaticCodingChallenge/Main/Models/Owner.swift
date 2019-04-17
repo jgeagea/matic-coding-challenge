@@ -7,11 +7,37 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Owner: NSObject {
     
     var repoOwnerName : String!;
     
-    var repoOwnerAvatarImage : String!;
+    var repoOwnerAvatarImageURL : String!;
+    
+    
+    static func arrayFromJSONArray(json:JSON) -> Array<Owner> {
+        
+        var temp = [Owner]()
+        
+        for owner in json.array!{
+            
+            temp.append(Owner.initWithJsonObject(json: owner["owner"]))
+            
+        }
+        
+        return temp;
+    }
+    
+    public static func initWithJsonObject(json:JSON) -> Owner {
+        
+        
+        let owner : Owner! = Owner.init();
+        owner.repoOwnerName = json["login"].string
+        owner.repoOwnerAvatarImageURL = json["avatar_url"].string
+        
+        return owner;
+        
+    }
 
 }
