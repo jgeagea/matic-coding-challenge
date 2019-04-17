@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="RepoTableViewCell" customModule="MaticCodingChallenge" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoTableViewCell" rowHeight="150" id="KGk-i7-Jjw" customClass="RepoTableViewCell" customModule="MaticCodingChallenge" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -45,20 +45,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n of stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-Bq-XpV">
-                        <rect key="frame" x="234" y="89.5" width="71.5" height="21"/>
+                        <rect key="frame" x="233.5" y="89.5" width="71.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starImage" translatesAutoresizingMaskIntoConstraints="NO" id="aek-uC-AP0">
-                        <rect key="frame" x="209" y="90" width="20" height="20"/>
+                        <rect key="frame" x="208.5" y="90" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="ThA-Pc-Tzd"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="aek-uC-AP0" firstAttribute="leading" secondItem="BoM-qt-exY" secondAttribute="trailing" constant="20" id="33M-iK-jE4"/>
                     <constraint firstItem="ucT-Tc-gkh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="6fD-bT-0lF"/>
                     <constraint firstItem="BoM-qt-exY" firstAttribute="leading" secondItem="a6T-lE-vRQ" secondAttribute="trailing" constant="5" id="7mm-OU-1zV"/>
                     <constraint firstItem="BoM-qt-exY" firstAttribute="centerY" secondItem="a6T-lE-vRQ" secondAttribute="centerY" id="BRb-wz-7U4"/>
@@ -69,11 +68,20 @@
                     <constraint firstItem="a6T-lE-vRQ" firstAttribute="top" secondItem="jkO-qM-u6i" secondAttribute="bottom" constant="25" id="chr-4o-P9n"/>
                     <constraint firstItem="jkO-qM-u6i" firstAttribute="leading" secondItem="ucT-Tc-gkh" secondAttribute="leading" id="fC1-WA-2bB"/>
                     <constraint firstItem="jkO-qM-u6i" firstAttribute="top" secondItem="ucT-Tc-gkh" secondAttribute="bottom" constant="7" id="iak-r4-fl1"/>
+                    <constraint firstAttribute="bottom" secondItem="a6T-lE-vRQ" secondAttribute="bottom" constant="34.5" id="otu-12-ObX"/>
                     <constraint firstItem="ucT-Tc-gkh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pln-4c-Ttc"/>
                     <constraint firstItem="a6T-lE-vRQ" firstAttribute="leading" secondItem="jkO-qM-u6i" secondAttribute="leading" id="tuX-ln-7Gk"/>
+                    <constraint firstAttribute="trailing" secondItem="jbi-Bq-XpV" secondAttribute="trailing" constant="15" id="yTd-oG-2yg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="repoDescriptionLabel" destination="jkO-qM-u6i" id="wln-AG-UwB"/>
+                <outlet property="repoNameLabel" destination="ucT-Tc-gkh" id="cxI-os-JLO"/>
+                <outlet property="repoNumberOfStarsLabel" destination="jbi-Bq-XpV" id="EqI-kb-PfA"/>
+                <outlet property="repoOwnerNameLabel" destination="BoM-qt-exY" id="L8a-Jk-cPP"/>
+                <outlet property="userAvatarImageView" destination="a6T-lE-vRQ" id="cOF-1I-RXG"/>
+            </connections>
             <point key="canvasLocation" x="52.799999999999997" y="96.251874062968525"/>
         </tableViewCell>
     </objects>
