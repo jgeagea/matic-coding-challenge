@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5220D06022661E51000783BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D05F22661E51000783BD /* AppDelegate.swift */; };
-		5220D06222661E51000783BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D06122661E51000783BD /* ViewController.swift */; };
+		5220D06222661E51000783BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D06122661E51000783BD /* MainViewController.swift */; };
 		5220D06522661E51000783BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5220D06322661E51000783BD /* Main.storyboard */; };
 		5220D06722661E52000783BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5220D06622661E52000783BD /* Assets.xcassets */; };
 		5220D06A22661E52000783BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5220D06822661E52000783BD /* LaunchScreen.storyboard */; };
 		5220D07522661E53000783BD /* MaticCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D07422661E53000783BD /* MaticCodingChallengeTests.swift */; };
 		5220D08022661E53000783BD /* MaticCodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D07F22661E53000783BD /* MaticCodingChallengeUITests.swift */; };
+		5220D0912266FC8D000783BD /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D08F2266FC8D000783BD /* RepoTableViewCell.swift */; };
+		5220D0922266FC8D000783BD /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5220D0902266FC8D000783BD /* RepoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5220D05C22661E51000783BD /* MaticCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaticCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5220D05F22661E51000783BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5220D06122661E51000783BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5220D06122661E51000783BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5220D06422661E51000783BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5220D06622661E52000783BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5220D06922661E52000783BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		5220D07B22661E53000783BD /* MaticCodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaticCodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5220D07F22661E53000783BD /* MaticCodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaticCodingChallengeUITests.swift; sourceTree = "<group>"; };
 		5220D08122661E53000783BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5220D08F2266FC8D000783BD /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		5220D0902266FC8D000783BD /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,8 @@
 		5220D05E22661E51000783BD /* MaticCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				5220D08D2266FB74000783BD /* Main */,
 				5220D05F22661E51000783BD /* AppDelegate.swift */,
-				5220D06122661E51000783BD /* ViewController.swift */,
-				5220D06322661E51000783BD /* Main.storyboard */,
 				5220D06622661E52000783BD /* Assets.xcassets */,
 				5220D06822661E52000783BD /* LaunchScreen.storyboard */,
 				5220D06B22661E52000783BD /* Info.plist */,
@@ -123,6 +126,25 @@
 				5220D08122661E53000783BD /* Info.plist */,
 			);
 			path = MaticCodingChallengeUITests;
+			sourceTree = "<group>";
+		};
+		5220D08D2266FB74000783BD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5220D08E2266FC4D000783BD /* Repo Table View Cell */,
+				5220D06322661E51000783BD /* Main.storyboard */,
+				5220D06122661E51000783BD /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5220D08E2266FC4D000783BD /* Repo Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5220D08F2266FC8D000783BD /* RepoTableViewCell.swift */,
+				5220D0902266FC8D000783BD /* RepoTableViewCell.xib */,
+			);
+			path = "Repo Table View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +254,7 @@
 				5220D06A22661E52000783BD /* LaunchScreen.storyboard in Resources */,
 				5220D06722661E52000783BD /* Assets.xcassets in Resources */,
 				5220D06522661E51000783BD /* Main.storyboard in Resources */,
+				5220D0922266FC8D000783BD /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5220D06222661E51000783BD /* ViewController.swift in Sources */,
+				5220D06222661E51000783BD /* MainViewController.swift in Sources */,
 				5220D06022661E51000783BD /* AppDelegate.swift in Sources */,
+				5220D0912266FC8D000783BD /* RepoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
