@@ -31,8 +31,10 @@ class RepoTableViewCell: UITableViewCell {
         
         self.repoNameLabel.text = repo.repoName;
         self.repoDescriptionLabel.text = repo.repoDescription;
-        self.repoOwnerNameLabel.text = repo.repoOwnerName;
         self.repoNumberOfStarsLabel.text = String(repo.repoNumberOfStars);
+        
+        self.repoOwnerNameLabel.text = repo.owner.repoOwnerName;
+        
     }
     
 }

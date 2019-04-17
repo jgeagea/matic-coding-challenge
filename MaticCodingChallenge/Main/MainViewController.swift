@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         
         self.initData();
         
@@ -26,9 +26,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     public func getAPIRequest() {
         
         //Get yesterday's date because the result of today from the api is 0.
-        let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: Date());
         
-        let date = self.convertDateFormater(yesterdayDate!)
+        let date = self.convertDateFormater(yesterdayDate!);
 
         let parameters: Parameters = [
             "q": "created:>" + date,
@@ -52,11 +52,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
-    func convertDateFormater(_ date: Date) -> String
-    {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return  dateFormatter.string(from: date)
+    private func convertDateFormater(_ date: Date) -> String {
+        
+        let dateFormatter = DateFormatter();
+        dateFormatter.dateFormat = "yyyy-MM-dd";
+        return  dateFormatter.string(from: date);
         
     }
     

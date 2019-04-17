@@ -14,10 +14,8 @@ class Repo: NSObject {
     
     var repoDescription : String!;
     
-    var repoOwnerName : String!;
-    
     var repoNumberOfStars : Int!;
     
-    var repoUserAvatarImage : String!;
+    var owner : Owner!;
 
 }

@@ -20,6 +20,7 @@
 		5220D0912266FC8D000783BD /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D08F2266FC8D000783BD /* RepoTableViewCell.swift */; };
 		5220D0922266FC8D000783BD /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5220D0902266FC8D000783BD /* RepoTableViewCell.xib */; };
 		5220D0952267113C000783BD /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D0942267113C000783BD /* Repo.swift */; };
+		5220D0A022674C8E000783BD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220D09F22674C8E000783BD /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5220D08F2266FC8D000783BD /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		5220D0902266FC8D000783BD /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		5220D0942267113C000783BD /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		5220D09F22674C8E000783BD /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		7D74BC962F49241E433F9B2F /* Pods_MaticCodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaticCodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6EBC03A8B10A583E996148 /* Pods-MaticCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticCodingChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaticCodingChallenge/Pods-MaticCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A2193EBBC715FD0F3052FA1A /* Pods_MaticCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaticCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				5220D0942267113C000783BD /* Repo.swift */,
+				5220D09F22674C8E000783BD /* Owner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				5220D06222661E51000783BD /* MainViewController.swift in Sources */,
 				5220D06022661E51000783BD /* AppDelegate.swift in Sources */,
 				5220D0912266FC8D000783BD /* RepoTableViewCell.swift in Sources */,
+				5220D0A022674C8E000783BD /* Owner.swift in Sources */,
 				5220D0952267113C000783BD /* Repo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
