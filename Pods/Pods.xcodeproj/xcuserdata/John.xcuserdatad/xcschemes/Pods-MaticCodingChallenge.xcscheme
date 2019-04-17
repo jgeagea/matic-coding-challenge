@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C9470C7A14E38D850AD81854CE1983C"
+               BlueprintIdentifier = "E0597F5A9182415C1CFD6066B2094CFE"
                BuildableName = "Pods_MaticCodingChallenge.framework"
                BlueprintName = "Pods-MaticCodingChallenge"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C9470C7A14E38D850AD81854CE1983C"
+            BlueprintIdentifier = "E0597F5A9182415C1CFD6066B2094CFE"
             BuildableName = "Pods_MaticCodingChallenge.framework"
             BlueprintName = "Pods-MaticCodingChallenge"
             ReferencedContainer = "container:Pods.xcodeproj">

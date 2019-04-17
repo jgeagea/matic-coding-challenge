@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
@@ -18,6 +19,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.initData();
     }
+    
     
     public func initData() {
         
