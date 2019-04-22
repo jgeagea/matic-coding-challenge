@@ -17,6 +17,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var reposArray : Array<Repo> = []
     
+    var currentPage:Int! = 1;
+    
+    //1000 results are returned according to api and each page returns 30 repos so max page is 34
+    var maxPage:Int = 34;
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -34,7 +39,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let parameters: Parameters = [
             "q": "created:>" + date,
             "sort": "stars",
-            "order": "desc"
+            "order": "desc",
+            "page": String(self.currentPage)
         ]
         
         Alamofire.request("https://api.github.com/search/repositories", parameters: parameters).responseJSON(completionHandler: { (response) in
@@ -48,9 +54,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 for repo:Repo in repos {
                     
                     self.reposArray.append(repo)
-                    self.tableview.reloadData();
                     
                 }
+                
+                self.tableview.reloadData();
+                
+                
                 
             case .failure(let error):
                 print(error.localizedDescription);
@@ -95,6 +104,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.initWithRepo(repo: repo)
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if(indexPath.row == self.reposArray.count - 1) {
+            
+            if(self.currentPage == self.maxPage) {
+                return;
+            }
+            
+            self.currentPage = self.currentPage + 1;
+            self.getAPIRequest();
+        }
     }
 
 }

@@ -23,6 +23,10 @@ class Repo: NSObject {
         
         var temp = [Repo]()
         
+        if(json.array == nil) {
+            return temp;
+        }
+        
         for repo in json.array! {
             
             let myRepo:Repo = Repo.init();
