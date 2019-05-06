@@ -84,6 +84,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableview.delegate = self;
         self.tableview.dataSource = self;
         self.tableview.register(UINib(nibName: "RepoTableViewCell", bundle: nil), forCellReuseIdentifier: "RepoTableViewCell")
+//        self.tableview.accessibilityIdentifier = "myTableView"
         
     }
     
